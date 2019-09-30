@@ -1,5 +1,7 @@
 package edu.cnm.deepdive.cards.model;
 
+import java.awt.Color;
+
 public enum Suit {
 
   CLUBS,
@@ -11,6 +13,14 @@ public enum Suit {
 
   public String getSymbol() {
     return SYMBOLS [ordinal()];
+  }
+
+  public Color getColor() {
+    return (ordinal() % 3 == 0) ? Color.BLACK : Color.RED;
+  }
+
+  public enum color {
+    BLACK, RED;
   }
 
 }
